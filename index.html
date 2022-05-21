@@ -1,85 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SAVINGS GROUP</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="table">
-            <div>
-                <div class="notification">
-                    <p id="notification_text"></p>
-                </div>
-                <form>
-                    <input type="name" id="name" class="user_name"/>
-                    <select id="tier">
-                        <option>Tier 1 (10,000 Naira)</option>
-                        <option>Tier 2 (20,000 Naira)</option>
-                        <option>Tier 3 (10,000 Naira)</option>
-                    </select>
-                    <input type="number" id="amount" class="user_amount"/>
-                    <button>Submit</button>
-                </form>
-            </div>
-            <div>
-                <div class="total">
-                    <p id="total_money"></p>
-                </div>
-                <form>
-                    <thead>
-                        <tr>
-                            <th>S/N</th>
-                            <th>Rider's name</th>
-                            <th>Tier</th>
-                            <th>Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody id="table_body">
-
-                    </tbody>
-                </form>
-            </div>
-            <table>
-                <h1>Julie's Savings Group</h1>
-                <thead>
-                    <tr>
-                        <td>
-                            Tier
-                        </td>
-                        <td>
-                            Amount(#)
-                        </td>
-                        <td>
-                            Interest(%)
-                        </td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>10,000</td>
-                        <td>7</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>20,000</td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>30,000</td>
-                        <td>25</td>
-                    </tr>
-                </tbody>
-            </table>
-
+      <div class="table">
+        <div>
+          <div id="notification">
+            <p id="notification_text"></p>
+            <p id="interest"></p>
+            <p id="withdraw"></p>
+          </div>
+          <form id="form">
+            <input type="name" id="name" class="user_name" />
+            <select id="tier">
+              <option value="1">Tier 1 (10,000 Naira)</option>
+              <option value="2">Tier 2 (20,000 Naira)</option>
+              <option value="3">Tier 3 (30,000 Naira)</option>
+            </select>
+            <input type="number" id="amount" class="user_amount" />
+            <button type="submit">Submit</button>
+          </form>
         </div>
+        <div>
+          <div class="total">
+            <p id="total_money"></p>
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>S/N</th>
+                <th>Rider's name</th>
+                <th>Tier</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+          </table>
+        </div>
+      </div>
     </div>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
